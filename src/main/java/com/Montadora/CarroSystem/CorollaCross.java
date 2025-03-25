@@ -2,12 +2,12 @@ package com.Montadora.CarroSystem;
 
 import java.awt.*;
 
-public class CorollaCross extends Carro {
+public class CorollaCross extends Carro{
 
-    public CorollaCross(Motor motor) {
-        super(motor);
-        setModelo("Corolla");
-        setMontadora(Montadora.TOYOTA);
-        setColor(Color.GREEN);
+    public CorollaCross(Motor motorCarro) {
+        super(motorCarro);
+        setColorCarro(Color.white);
+        setModeloCarro("ColorollaCross");
+        setMontadoraEnum(MontadoraEnum.TOYOTA);
     }
 }

@@ -3,51 +3,51 @@ package com.Montadora.CarroSystem;
 import java.awt.*;
 
 public class Carro {
-    private String modelo;
-    private Color color;
-    private Motor motor;
-    private Montadora montadora;
+    private String modeloCarro;
+    private Color colorCarro;
+    private Motor motorCarro;
+    private MontadoraEnum montadoraEnum;
 
-    public Carro(Motor motor) {
-        this.motor = motor;
+    public Carro(Motor motorCarro) {
+        this.motorCarro = motorCarro;
     }
 
-    public String getModelo() {
-        return modelo;
+    public String getModeloCarro() {
+        return modeloCarro;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setModeloCarro(String modeloCarro) {
+        this.modeloCarro = modeloCarro;
     }
 
-    public Color getColor() {
-        return color;
+    public Color getColorCarro() {
+        return colorCarro;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
+    public void setColorCarro(Color colorCarro) {
+        this.colorCarro = colorCarro;
     }
 
-    public Motor getMotor() {
-        return motor;
+    public Motor getMotorCarro() {
+        return motorCarro;
     }
 
-    public void setMotor(Motor motor) {
-        this.motor = motor;
+    public void setMotorCarro(Motor motorCarro) {
+        this.motorCarro = motorCarro;
     }
 
-    public Montadora getMontadora() {
-        return montadora;
+    public MontadoraEnum getMontadoraEnum() {
+        return montadoraEnum;
     }
 
-    public void setMontadora(Montadora montadora) {
-        this.montadora = montadora;
+    public void setMontadoraEnum(MontadoraEnum montadoraEnum) {
+        this.montadoraEnum = montadoraEnum;
     }
 
-    public CarroStatus darIngnicao(Chave chave) {
-        if (chave.getMontadora() != this.montadora){
-            return new CarroStatus("Essa chave não é compativel com este Veiculo");
+    public StatusCarro darIngnicao(Chave chave) {
+        if (chave.getMontadora() != this.montadoraEnum) {
+            return new StatusCarro("Chave Incorreta");
         }
-        return new CarroStatus("Ligado" + motor);
+        return new StatusCarro("ligou " + motorCarro);
     }
 }

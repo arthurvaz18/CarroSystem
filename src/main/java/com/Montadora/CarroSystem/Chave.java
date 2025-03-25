@@ -1,14 +1,14 @@
 package com.Montadora.CarroSystem;
 
 public class Chave {
-    private Montadora montadora;
+    private MontadoraEnum montadora;
     private String tipo;
 
-    public Montadora getMontadora() {
+    public MontadoraEnum getMontadora() {
         return montadora;
     }
 
-    public void setMontadora(Montadora montadora) {
+    public void setMontadora(MontadoraEnum montadora) {
         this.montadora = montadora;
     }
 
